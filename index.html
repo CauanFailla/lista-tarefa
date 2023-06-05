@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefa</h1>
+        <div class="user">
+            <img  class="profile_photo" src="imagens/perfil.png" alt="imagem de perfil">
+            <p>Cauan Failla</p>
+        </div>
+        
+    </header>
+    <main>
+        <section class="sec_personalizacao">
+            <div class="hd">
+                <span class="material-icons btn_back">arrow_back</span>
+            </div>
+            <div class="p_main">
+                <div>
+                    <p>Nome da Tarefa</p>
+                    <input type="text" name="taskName" id="itaskName" autocomplete="off">
+                </div>
+                <button class="btn_criar">Criar</button>
+            </div>
+        </section>
+        <div class="b_e">
+            <div class="mens_erro">
+                <p>Por favor, defina o nome da sua tarefa!</p>
+                <div>
+                    <button class="btn_contin">Criar mesmo assim</button>
+                    <button  class="btn_confirmar">Ok</button>
+                </div>
+            </div>
+        </div>
+        <section  class="men_vaz">
+            <img src="imagens/tarefa.png" alt="">
+        </section>
+        <section class="list_task">
+            
+        </section>
+        <div class="btn_terefa">
+            <span class="material-icons">add</span>
+        </div>
+        <div  class="teste">
+            Tarefa Concluída
+        </div>
+    </main>
+    <footer>
+        <div class="menu_1"><span class="material-icons">home</span></div>
+        <div><span class="material-icons">settings</span></div>
+        <div><span class="material-icons">privacy_tip</span></div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
