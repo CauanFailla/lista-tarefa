@@ -10,8 +10,13 @@
 </head>
 <body>
     <header>
-        <h1>Lista de Tarefa</h1>
+        <div  class="more">
+            <span class="material-icons btn_menu btn_h">menu</span>
+            <h1>Lista de Tarefa</h1>
+        </div>
         <div class="user">
+            <span class="material-icons btn_user btn_h">notifications</span>
+            <span class="material-icons btn_user btn_h">info</span>
             <img  class="profile_photo" src="imagens/perfil.png" alt="imagem de perfil">
             <p>Cauan Failla</p>
         </div>
@@ -40,7 +45,7 @@
             </div>
         </div>
         <section  class="men_vaz">
-            <img src="imagens/tarefa.png" alt="">
+            <img  src="imagens/tarefa.png" alt="">
         </section>
         <section class="list_task">
             
@@ -51,13 +56,25 @@
         <div  class="teste">
             Tarefa Concluída
         </div>
+
+        
     </main>
+
+    <section class="historico">
+        <div>
+            <h2>Tarefas Concluidas:</h2>
+        </div>
+        <ul class="completed-list">
+            
+        </ul>
+    </section>
     <footer>
-        <div class="menu_1"><span class="material-icons">home</span></div>
-        <div><span class="material-icons">settings</span></div>
-        <div><span class="material-icons">privacy_tip</span></div>
+        <div class="btn-home menu_1"><span class="material-icons">home</span></div>
+        <div class="btn-historico"><span class="material-icons hist">history</span></div>
+        <div><span class="material-icons settings">settings</span></div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+   
 </body>
+<script src="scripts/script.js"></script>
 </html>
