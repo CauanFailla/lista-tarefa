@@ -15,6 +15,7 @@
 }
 
 body {
+    overflow: hidden;
     background-color: var(--cor3);
 }
 
@@ -66,17 +67,83 @@ header p {
     user-select: none;
 }
 
+header .sec_menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 100%;
+    height: 100vh;
+}
+
+header .menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #231E24;
+    width: 250px;
+    height: 100vh;
+}
+
+header .header_menu  {
+    padding-top: 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    height: 40px;
+}
+
+.header_menu .material-icons {
+    cursor: pointer;
+    font-size: 2.3em;
+    user-select: none;
+    transition-duration: 0.1s;
+}
+
+.header_menu .material-icons:hover {
+    font-size: 2.8em;
+}
+
+header .main_menu {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .main_menu > div {
+    display: flex;
+    cursor: pointer;
+    width: 175px;
+    
+}
+
+header .main_menu > div:hover {
+    display: flex;
+    cursor: pointer;
+}
+
+.main_menu >  div > .material-icons {
+    font-size: 1.8em;
+    color: white;
+    margin-top: 5px;
+    user-select: none;
+}
+
 main {
     padding-top: 40px;
 }
 
 main .sec_personalizacao {
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
     position: absolute;
     top: 40px;
     background-color: var(--cor1);
     width: 100%;
-    height: calc(87vh  + 1px) ;
+    height: 90%;
     z-index: 1;
 }
 
@@ -93,12 +160,13 @@ main .sec_personalizacao {
 }
 
 .sec_personalizacao .p_main {
+    margin-bottom: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 450px;
+    height: 490px;
 }
 
 .p_main input{
@@ -195,10 +263,14 @@ main .btn_terefa {
     color: white;
     border-radius: 50%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.479);
+    transition-duration: .1s;
 }
 
 .btn_terefa:hover {
     background-color: #352d36;
+    width: 70px;
+    height: 70px;
+    font-size: 1.3em;
 }
 
 .btn_terefa .material-icons {
@@ -242,19 +314,22 @@ main .btn_terefa {
     background-color: var(--cor4);
     width: 320px;
     color: white;
-    height: 95px;
+    height: 130px;
     text-align: center;
     border-radius: 20px;
     transform: translate(-50%,-50%);
 }
 
 .mens_erro p {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .mens_erro button {
-    margin-bottom: 10px;
-    width: 120px;
+    margin-bottom: 13px;
+    width: 134px;
+    height: 24px;
+    border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
     border: none;
     background-color: var(--cor3);
@@ -278,6 +353,22 @@ main .btn_terefa {
     background-color: var(--cor3);
 }
 
+.historico ul  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historico li  {
+    margin-top: 10px;
+    background-color: white;
+    width: 56vw;
+    list-style: none;
+    padding: 1px 0px;
+    border-radius: 10px 0px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
+}
 
 footer {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.315);
@@ -367,6 +458,33 @@ header .btn_user  {
         margin-right: 40px;
     }
 
+
+    main .sec_personalizacao {
+        height: calc(93vh + 5px);
+    }
+
+    .p_main button {
+        width: 23vw;
+        height: 35px;
+        border-radius: 15px;
+    }
+
+    .p_main input {
+        font-size: 1em;
+        width: 40vw;
+    }
+
+    .p_main p {
+        font-size: 1.2em;
+        color: rgb(51, 51, 51);
+    }
+
+    .historico li {
+        width: 40vw;
+        margin-top: 20px;
+        padding: 3px 0px;
+    }
+
     main .list_task div {
         width: 50vw;
     }
@@ -378,6 +496,10 @@ header .btn_user  {
 
     .list_task p {
         margin-bottom: 1px;
+    }
+
+    .historico {
+        height: 80vh;
     }
 
     footer {

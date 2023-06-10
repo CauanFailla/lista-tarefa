@@ -17,6 +17,37 @@ let  bd = document.body
 let img  = document.querySelector('.men_vaz img')
 let very = []
 
+//--Telas maiores--
+
+const sec_menu = document.querySelector('.sec_menu')
+const btn_menu = document.querySelector('.btn_menu')
+const btn_close_menu = document.querySelector('.header_menu .material-icons')
+const btn_home_menu =  document.querySelectorAll('.main_menu div')[0]
+const btn_historico_menu =  document.querySelectorAll('.main_menu div')[1]
+
+btn_home_menu.addEventListener('click',()=>{
+    sec_menu.style.display  = 'none'
+    main.style.display = 'block'
+    div_historico.style.display = 'none'
+})
+
+btn_menu.addEventListener('click',()=>{
+    sec_menu.style.display  = 'block'
+})
+
+btn_close_menu.addEventListener('click',()=>{
+    sec_menu.style.display  = 'none'
+})
+
+btn_historico_menu.addEventListener('click',()=>{
+    sec_menu.style.display  = 'none'
+    div_historico.style.display = 'flex'
+    main.style.display = 'none'
+    processoHistorico()
+})
+
+
+//END
 if (bd.offsetWidth >= '600') {
     img.src  = 'imagens/tarefa - Copia.png'
 }
@@ -26,12 +57,13 @@ window.addEventListener('resize',(g)=>{
         img.src  = 'imagens/tarefa - Copia.png'
     } else {
         img.src  = 'imagens/tarefa.png'
+        sec_menu.style.display  = 'none'
     }
 })
 
 btn_task.addEventListener('click',()=>{
     taskName.focus()
-    sec_perso.style.display = 'block'
+    sec_perso.style.display = 'flex'
 })
 
 btn_generate.addEventListener('click',()=>{
@@ -131,10 +163,8 @@ function vert_teste(val) {
    
 }
 
-btn_historico.addEventListener('click',()=>{
+function processoHistorico() {
     let completed_list =document.querySelector('.completed-list')
-    div_historico.style.display = 'flex'
-    main.style.display = 'none'
     very.map((v)=>{
         let n = vert_teste(v)
         if (n == 0) {
@@ -145,6 +175,11 @@ btn_historico.addEventListener('click',()=>{
         }
         
     })
+}
+
+btn_historico.addEventListener('click',()=>{
+    div_historico.style.display = 'flex'
+    main.style.display = 'none'
+    processoHistorico()
     
 })
-
